@@ -4,7 +4,12 @@
       <path d="M16 2L3 10.2162L16 18" stroke="#F2F2F2" stroke-width="3"/>
     </svg>
   </button>
-  <img class="description-card__image" mat-card-image [src]="currCardData.image" alt="video image">
+
+  <a class="description-card__link" [href]="currCardData.videoLink" target="_blank">
+    <img class="description-card__play-btn" src="./assets/icons/play-icon.png" alt="play video button">
+    <img class="description-card__image" mat-card-image [src]="currCardData.image" alt="video image">
+  </a>
+
   <div class="description-card-wrapper">
     <div class="title-wrapper">
       <mat-card-title class="description-card__title">{{currCardData.title}}</mat-card-title>

@@ -7,6 +7,7 @@ import { SearchService } from '../../services/search-service';
 import { TVideoListResponseItem } from '../../models/search-response.model';
 import { map, takeWhile, tap } from 'rxjs';
 import { LoaderService } from '../../../shared/services/loader.service';
+import { YOUTUBE_URL } from '../../../app.consts';
 
 @Component({
   selector: 'app-detailed-info-page',
@@ -57,7 +58,7 @@ export class DetailedInfoPageComponent implements OnInit {
       likes: +currCard.statistics.likeCount,
       comments: +currCard.statistics.commentCount,
       title: currCard.snippet.title,
-      videoLink: currCard.id,
+      videoLink: YOUTUBE_URL + currCard.id,
       color: getCardColor(currCard.snippet.publishedAt),
       date: currCard.snippet.publishedAt,
       description: currCard.snippet.description,
