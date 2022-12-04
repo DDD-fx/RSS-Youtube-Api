@@ -1,0 +1,7 @@
+<mat-form-field appearance="fill">
+  <mat-label>What do you want to find out?</mat-label>
+  <input [formControl]="searchFieldControl" matInput type="text">
+  <button matSuffix mat-icon-button aria-label="Clear" (click)="searchFieldControl.setValue('')">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>

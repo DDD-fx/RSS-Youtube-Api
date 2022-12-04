@@ -1,0 +1,35 @@
+@import "../../node_modules/normalize.css/normalize.css";
+@import "variables";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: #FFFFFF;
+  font-weight: 400;
+}
+
+.input {
+  background: $input-background;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+.mat-flat-button.btn {
+  background: $main-blue;
+  color: $button-text-color;
+  transition: $transition;
+  line-height: 24px;
+
+  &:enabled:hover {
+    background-color: $light-blue;
+  }
+}
+
+.black-icon {
+  fill: $black-icon;
+}

@@ -1,0 +1,19 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/variables";
+
+mat-form-field {
+  width: 350px;
+}
+
+.search-btn {
+  border-radius: 0 4px 4px 0;
+  height: 24px;
+  @include small-font;
+  line-height: 26px;
+
+  &:not([disabled]):hover {
+    filter: $card-hover-btn-color;
+    background-color: $main-blue;
+  }
+}
+

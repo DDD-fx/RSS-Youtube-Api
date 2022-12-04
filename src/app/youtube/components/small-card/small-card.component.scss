@@ -1,0 +1,65 @@
+@import "src/styles/mixins";
+@import "src/styles/variables";
+
+.small-card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex: 1 0 auto;
+  max-width: 263px;
+  border-radius: 5px;
+  background: $background-grey;
+  transition: $transition;
+  padding: 0;
+
+  &:hover {
+    cursor: pointer;
+    filter: $hover-shadow;
+  }
+
+  &__image {
+    width: 223px;
+    max-height: 125px;
+    margin: 0;
+    border-radius: 0;
+    padding: 20px;
+  }
+
+  &__more-btn {
+    align-self: center;
+    width: 120px;
+    height: 32px;
+    @include small-font;
+    margin-bottom: 10px;
+    margin-top: auto;
+
+    .small-card:hover & {
+      filter: $card-hover-btn-color;
+    }
+
+    .small-card:hover &:hover {
+      filter: none;
+    }
+  }
+}
+
+.mat-card-image:first-child {
+  margin: 0;
+}
+
+.mat-card-actions {
+  padding: 0 20px;
+  @include flex-center;
+  flex-wrap: wrap;
+  margin: 0 0 20px;
+}
+
+.mat-card-title {
+  @include title-font;
+  margin: 0 30px 30px 20px;
+  text-align: right;
+}
+
+.mat-card-footer {
+  @include card-footer;
+}

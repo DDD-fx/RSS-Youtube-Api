@@ -1,0 +1,15 @@
+<div class="sorting-wrapper">
+  <p class="sorting__title">Sorting by:</p>
+  <button class="sorting__option-btn" (click)="sortByDate()">
+    <span class="sorting__option-text">date</span>
+    <span class="sorting__arrow" *ngIf="(sortFilterConfig$ | async)?.date === 'ascending'">↑</span>
+    <span class="sorting__arrow" *ngIf="(sortFilterConfig$ | async)?.date === 'descending'">↓</span>
+  </button>
+  <button class="sorting__option-btn" (click)="sortByViews()">
+    <span class="sorting__option-text">count of views</span>
+    <span class="sorting__arrow" *ngIf="(sortFilterConfig$ | async)?.views === 'ascending'">↑</span>
+    <span class="sorting__arrow" *ngIf="(sortFilterConfig$ | async)?.views === 'descending'">↓</span>
+  </button>
+  <button class="sorting__option">by word or sentence</button>
+  <input [ngModel]="(sortFilterConfig$ | async)?.byWord" (ngModelChange)="titleToFilterChanged($event)" class="sorting__input input" name="filterByTitle">
+</div>

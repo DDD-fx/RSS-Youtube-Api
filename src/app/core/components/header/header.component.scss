@@ -1,0 +1,62 @@
+@import "src/styles/mixins";
+@import "src/styles/variables";
+
+.header {
+  padding: 10px;
+  background: $background-grey;
+  @include flex-center;
+
+  &__main-logo {
+    width: 50px;
+    padding-right: 10px;
+  }
+}
+
+.sorting-btn {
+  min-width: 24px;
+  height: 24px;
+  padding: 0;
+  margin-left: 10px;
+
+  &:hover {
+    filter: $card-hover-btn-color;
+    background-color: $main-blue;
+  }
+}
+
+.create-video-btn {
+  height: 35px;
+  margin-left: 20px;
+
+  &:hover {
+    filter: $hover-shadow;
+  }
+}
+
+.login-wrapper {
+  display: flex;
+  gap: 10px;
+  margin-left: 10vw;
+
+  @media (max-width: 670px) {
+    margin-left: 10px;
+  }
+}
+
+.login-name {
+  @include small-font;
+  color: $grey-icon;
+  margin: 0;
+  line-height: 24px;
+}
+
+.login-btn {
+  background: url("../../../../assets/icons/login.svg") no-repeat;
+  min-width: 24px;
+  height: 24px;
+  padding: 0;
+
+  &:hover {
+    filter: $hover-shadow;
+  }
+}

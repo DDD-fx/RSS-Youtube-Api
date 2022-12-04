@@ -1,0 +1,50 @@
+<mat-card *ngIf="currCardData" class="description-card card">
+  <button class="description-card__back-btn description-card__back-btn--{{currCardData.color}} btn" (click)="goBack()">
+    <svg class="back-btn-svg" width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 2L3 10.2162L16 18" stroke="#F2F2F2" stroke-width="3"/>
+    </svg>
+  </button>
+  <img class="description-card__image" mat-card-image [src]="currCardData.img" alt="video image">
+  <div class="description-card-wrapper">
+    <div class="title-wrapper">
+      <mat-card-title class="description-card__title">{{currCardData.title}}</mat-card-title>
+      <div class="description-card__date">{{currCardData.date | date: 'fullDate'}}</div>
+    </div>
+    <div class="description-wrapper">
+      <p class="description-card__description-title">Description:</p>
+      <p class="description-card__description">{{currCardData.description}}</p>
+    </div>
+    <mat-card-actions>
+      <button mat-button>
+        <svg class="black-icon" width="23" height="14" viewBox="0 0 23 14" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11.1675 0C6.09228 0 1.77484 2.89272 0 7C1.77484 11.1073 6.09228 14 11.1675 14C16.2428 14 20.5602 11.1073 22.335 7C20.5602 2.89272 16.2428 0 11.1675 0ZM11.1675 11.6682C8.37564 11.6682 6.09228 9.56821 6.09228 7C6.09228 4.43179 8.37564 2.33179 11.1675 2.33179C13.9594 2.33179 16.2428 4.43179 16.2428 7C16.2428 9.56821 13.9594 11.6682 11.1675 11.6682ZM11.1675 4.2C9.4924 4.2 8.12138 5.46093 8.12138 7C8.12138 8.53907 9.4924 9.8 11.1675 9.8C12.8427 9.8 14.2137 8.53907 14.2137 7C14.2137 5.46093 12.8427 4.2 11.1675 4.2Z"/>
+        </svg>
+        {{0}}
+      </button>
+      <button mat-button>
+        <svg class="black-icon" width="17" height="14" viewBox="0 0 17 14" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12.2413 0H12.2011C10.6024 0 9.18905 0.735 8.37564 1.82C7.56224 0.735 6.14885 0 4.55023 0H4.50996C2.0174 0.021 0 1.7815 0 3.955C0 5.25 0.652334 7.0875 1.92479 8.5995C4.34889 11.48 8.37564 14 8.37564 14C8.37564 14 12.4024 11.48 14.8265 8.5995C16.099 7.0875 16.7513 5.25 16.7513 3.955C16.7513 1.7815 14.7339 0.021 12.2413 0Z"/>
+        </svg>
+        {{0}}
+      </button>
+
+      <button mat-button>
+        <svg class="black-icon" width="13" height="13" viewBox="0 0 13 13" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0 4.1687V11.75C0 12.4406 0.559375 13 1.25 13H8.83125C9.52188 13 10.0813 12.4406 10.0813 11.75V4.1687C10.0813 3.47808 9.52188 2.9187 8.83125 2.9187H1.25C0.559375 2.9187 0 3.47808 0 4.1687Z"
+            fill="black"/>
+          <path
+            d="M2.91797 1.25V2.1375C2.91797 2.20625 2.97422 2.2625 3.04297 2.2625H9.23672C10.0617 2.2625 10.7367 2.9375 10.7367 3.7625V9.95625C10.7367 10.025 10.793 10.0813 10.8617 10.0813H11.7492C12.4398 10.0813 12.9992 9.52188 12.9992 8.83125V1.25C12.9992 0.559375 12.4398 0 11.7492 0H4.16797C3.47734 0 2.91797 0.559375 2.91797 1.25Z"/>
+        </svg>
+        {{0}}
+      </button>
+    </mat-card-actions>
+    <mat-card-footer class="mat-card-footer--{{currCardData.color}}"></mat-card-footer>
+  </div>
+</mat-card>
+
